@@ -1,0 +1,13 @@
+#Sat Jan 31 19:25:39 CST 2015
+useQuickDiffPrefPage=true
+wizard.preferred.toolchains=cdt.managedbuild.toolchain.gnu.exe.debug
+editor_folding_default_macros=false
+useAnnotationsPrefPage=true
+editor_folding_default_structures=false
+editor_folding_preprocessor_enabled=true
+editor_folding_enabled=true
+spelling_locale_initialized=true
+eclipse.preferences.version=1
+editor_folding_default_inactive=false
+editor_folding_statements=true
+editor_folding_default_headers=false

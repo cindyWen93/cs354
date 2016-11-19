@@ -1,0 +1,17 @@
+/*
+ * MyC.h
+ *
+ *  Created on: Jan 31, 2015
+ *      Author: songzi
+ */
+
+#ifndef MYC_H_
+#define MYC_H_
+
+class MyC {
+public:
+	MyC();
+	virtual ~MyC();
+};
+
+#endif /* MYC_H_ */

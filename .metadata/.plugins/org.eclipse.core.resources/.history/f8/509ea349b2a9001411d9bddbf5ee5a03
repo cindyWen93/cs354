@@ -1,0 +1,17 @@
+/*
+ * MyC.cpp
+ *
+ *  Created on: Jan 31, 2015
+ *      Author: songzi
+ */
+
+#include "MyC.h"
+
+MyC::MyC() {
+	// TODO Auto-generated constructor stub
+
+}
+
+MyC::~MyC() {
+	// TODO Auto-generated destructor stub
+}

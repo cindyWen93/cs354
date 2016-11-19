@@ -1,0 +1,111 @@
+Name (and partner's name):Songzi Wen, Xiaojian Nie
+Section (and partner's section):Lec001 Lec001
+
+Assignment 4 questions.
+Do not remove the questions from this file.
+Please indent your answers.
+
+For ALL cache simulations, use a capacity of 16384 bytes for both 
+the I-cache and the D-cache.
+
+cache1D
+-------
+
+Describe how you tested your code to verify that it works.
+We print the content of every element of the array.
+
+What do you get from running pin with a block size of 4 bytes?
+Instruction cache misses:	6005
+Instruction cache references:	155718
+Data cache misses:		17168
+Data cache references:		106549
+
+What is the hit ratio for the I-cache with a block size of 4 bytes?
+hit ratio = (155718 - 6005)/155718 = 0.9614
+
+What is the hit ratio for the D-cache with a block size of 4 bytes?
+hit ration = (106549 - 17168)/106549 = 0.8389
+
+What do you get from running pin with a block size of 32 bytes?
+Instruction cache misses:	1170
+Instruction cache references:	155718
+Data cache misses:		4449
+Data cache references:		106549
+
+What is the hit ratio for the I-cache with a block size of 32 bytes?
+hit ratio = (155718 - 1170)/ 155718 = 0.9925
+
+What is the hit ratio for the D-cache with a block size of 32 bytes?
+hit ratio = (106549 - 4449)/ 106549 = 0.9582
+
+What do you get from running pin with a block size of 64 bytes?
+Instruction cache misses:	702
+Instruction cache references:	155718
+Data cache misses:		2254
+Data cache references:		106549
+
+What is the hit ratio for the I-cache with a block size of 64 bytes?
+hit ratio = (155718 - 702)/ 155718 = 0.9955
+
+What is the hit ratio for the D-cache with a block size of 64 bytes?
+hit ratio = (106549 - 2254)/ 106549 = 0.9788
+
+Which block size is best for the I-cache?  Why?
+For I-cache, a block size of 64 bytes is the best because of the highest hit ratio in above three run.
+
+Which block size is best for the D-cache?  Why? In what way does the block 
+  size affect the hit ratio for this program?
+For D-cache, a block size of 64 bytes is the best. In this program, for both I-cache and D-cache, the larger the block size is,
+the higer hit ratio will be. 
+
+cache2Drows
+-----------
+
+What do you get from running pin with a block size of 64 bytes?
+Instruction cache misses:	705
+Instruction cache references:	16616738
+Data cache misses:		106740
+Data cache references:		12061552
+
+What is the hit ratio for the I-cache with a block size of 64 bytes?
+(16616738 - 705) / 16616738 = 0.99995757
+
+What is the hit ratio for the D-cache with a block size of 64 bytes?
+(12061552 - 106740) / 12061552 = 0.99115039
+
+cache2Dcols
+-----------
+
+What do you get from running pin with a block size of 64 bytes?
+Instruction cache misses:	705
+Instruction cache references:	16599238
+Data cache misses:		1507594
+Data cache references:		12049052
+
+What is the hit ratio for the I-cache with a block size of 64 bytes?
+hit ratio = (16599238 - 705) / 16599238 = 0.99995753
+
+What is the hit ratio for the D-cache with a block size of 64 bytes?
+hit ratio = (12049052 - 1507549) / 12049052 =0.87487862
+
+Comparison of cache2Drows and cache2Dcols
+-----------------------------------------
+
+Compare the performance (hit ratios) of the I-cache for these 2 programs.
+Justify your statistics.
+The performance of the I-cache is nearly the same. For the first program,
+the hit ratio is 0.99995757 and for the second program, the hit ratio 0.99995753,
+they differ in only 0.00000004.They all pretty high because I-cache is for machine code instructions, which has high spatial locality for these two program.
+Row major or column major has no effect on I-cache so the performance of I-cache for these two programs are both very high.
+
+Compare the performance (hit ratios) of the D-cache for these 2 programs.
+Explain any differences.
+The first program has better performance. Because in I-32 for 2D array, it
+is row major. For the first program, the memory is accessed one by one.  
+However, for the second program, since it is row major, the program needs to jump large distance to next row when assigning values, leading huge amount misses on D-cache.
+So, for D-cache, the first program has a better performance.
+
+
+
+
+
